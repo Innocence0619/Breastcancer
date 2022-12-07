@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Breast Cancer app</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <style>
+        h1 {
+            color: #5DADE2;
+            text-align: center;
+            font-size: 60px;
+        }
+        h2 {
+            color: #48C9B0;
+            font-family: verdana;
+            font-size: 30px;
+        }
+        span {
+            color: #6C3483;
+            font-family: verdana;
+            font-size: 30px;
+        }
+        li {
+            color: black;
+            font-family: Georgia, 'Times New Roman', Times, serif;
+            font-style: italic;
+            font-size: large;
+        }
+        p {
+            color: darkgreen;
+            font-family: 'Times New Roman', Times, serif;
+            font-size: median;
+            font-style: oblique;
+        }
+    </style>
+</head>
+
+<script type="text/javascript">
+
+    $(function() {
+        $('#predict').click(function() {
+            event.preventDefault();
+            var form_data = new FormData($('#myform')[0]);
+            console.log(form_data);
+            $.ajax({
+                type: 'POST',
+                url: '/',
+                data: form_data,
+                contentType: false,
+                processData: false,
+            }).done(function(data, textStatus, jqXHR){
+                $('#result').text(data);
+            }).fail(function(data){
+                alert('error!');
+            });
+        });
+    });
+
+   function show() {
+        document.getElementById("heading").src = document.getElementById("selection").value;
+    }
+
+    function play() {
+        document.getElementById("head").src = document.getElementById("select").value;
+    }
+</script>
+
+<body background="static/1.png " style="background-repeat:no-repeat;background-attachment:fixed;background-size:100% 100%;">
+    <h1>Breast Cancer Prediction</h1>
+
+    <div align="center">
+        <br>
+        <h2>Please select radius range：</h2>
+        <select id="selection" onchange="show()">
+            <option value="static/Figure_6.png" style="display:none">--Please select--</option>
+            <option value="static/Figure_7.png">radius_mean in range[13,15.3]</option>
+            <option value="static/Figure_8.png">less or greater radius_mean</option>
+            <option value="static/Figure_6.png">All range radius_mean</option>
+        </select>
+        <br><br>
+        <img id="heading" src="static/Figure_6.png" width="350px"></p>
+
+        <br>
+        <span>please input the following features:</span>
+        <p></p>
+        <form id="myform" method="POST">
+        <li>Radius_mean<br>
+            <input type="text" name="_radius_mean" style="width: 350px;" placeholder="Enter an input of radius_mean (float)" value =13.73><br>
+            <p>
+                Example: <em>13.73</em>
+            </p>
+        </li>
+        <li>Texture_mean<br>
+            <input type="text" name="_texture_mean" style="width: 350px;" placeholder="Enter an input of texture_mean (float)" value=18.84 ><br>
+            <p>
+                Example: <em>18.84</em>
+            </p>
+        </li>
+        <li>Perimeter_mean<br>
+            <input type="text" name="_perimeter_mean" style="width: 350px;" placeholder="Enter an input of perimeter_mean (float)" value = 86.24><br>
+            <p>
+                Example: <em>86.24</em>
+            </p>
+        </li>
+        <li>Area_mean<br>
+            <input type="text" name="_area_mean" style="width: 350px;" placeholder="Enter an input of area_mean (float)" value="551.1"><br>
+            <p>
+                Example: <em>551.1</em>
+            </p>
+        <li>Smoothness_mean<br>
+            <input type="text" name="_smoothness_mean" style="width: 350px;" placeholder="Enter an input of smoothness_mean (float)" value=0.09587><br>
+            <p>
+                Example: <em>0.09587</em>
+            </p>
+        </li>
+        <li>Compactness_mean<br>
+            <input type="text" name="_compactness_mean" style="width: 350px;" placeholder="Enter an input of compactness_mean (float)" value = 0.09263><br>
+            <p>
+                Example: <em>0.09263</em>
+            </p>
+        </li>
+        <li>Concavity_mean<br>
+            <input type="text" name="_concavity_mean" style="width: 350px;" placeholder="Enter an input of concavity_mean (float)" value= 0.06154><br>
+            <p>
+                Example: <em>0.06154</em>
+            </p>
+        </li>
+        <li>Concavepoints_mean<br>
+            <input type="text" name="_concavepoints_mean" style="width: 350px;" placeholder="Enter an input of concavepoints_mean (float)" value=0.0335><br>
+            <p>
+                Example: <em>0.0335</em>
+            </p>
+        </li>
+        <li>Symmetry_mean<br>
+            <input type="text" name="_symmetry_mean" style="width: 350px;" placeholder="Enter an input of symmetry_mean (float)" value="0.1792"><br>
+            <p>
+                Example: <em>0.1792</em>
+            </p>
+        </li>
+        <li>Fractal_dimension_mean<br>
+            <input type="text" name="_fractal_dimension_mean" style="width: 350px;" placeholder="Enter an input of fractal_dimension_mean (float)" value = 0.06154><br>
+            <p>
+                Example: <em>0.06154</em>
+            </p>
+        </li>
+        <li>Radius_se<br>
+            <input type="text" name="_radius_se" style="width: 350px;" placeholder="Enter an input of radius_se (float)" value="0.3242"><br>
+            <p>
+                Example: <em>0.3242</em>
+            </p>
+        </li>
+        <li>Texture_se<br>
+            <input type="text" name="_texture_se" style="width: 350px;" placeholder="Enter an input of texture_se (float)" value="1.108"><br>
+            <p>
+                Example: <em>1.108</em>
+            </p>
+        </li>
+        <li>Perimeter_se<br>
+            <input type="text" name="_perimeter_se" style="width: 350px;" placeholder="Enter an input perimeter_se (float)" value="2.287"><br>
+            <p>
+                Example: <em>2.287</em>
+            </p>
+        </li>
+        <li>Area_se<br>
+            <input type="text" name="_area_se" style="width: 350px;" placeholder="Enter an input of area_se (float)" value="24.53"><br>
+            <p>
+                Example: <em>24.53</em>
+            </p>
+        </li>
+        <li>Smoothness_se<br>
+            <input type="text" name="_smoothness_se" style="width: 350px;" placeholder="Enter an input of smoothness_se (float)" value="0.00638"><br>
+            <p>
+                Example: <em>0.00638</em>
+            </p>
+        </li>
+        <li>Compactness_se<br>
+            <input type="text" name="_compactness_se" style="width: 350px;" placeholder="Enter an input of compactness_se (float)" value="0.02045"><br>
+            <p>
+                Example: <em>0.02045</em>
+            </p>
+        </li>
+        <li>Concavity_se<br>
+            <input type="text" name="_concavity_se" style="width: 350px;" placeholder="Enter an input of concavity_se (float)" value="0.02589"><br>
+            <p>
+                Example: <em>0.02589</em>
+            </p>
+        </li>
+        <li>Concavepoints_se<br>
+            <input type="text" name="_concavepoints_se" style="width: 350px;" placeholder="Enter an input of concavepoints_se (float)" value="0.01093"><br>
+            <p>
+                Example: <em>0.01093</em>
+            </p>
+        </li>
+        <li>Symmetry_se<br>
+            <input type="text" name="_symmetry_se" style="width: 350px;" placeholder="Enter an input of symmetry_se (float)" value="0.01873"><br>
+            <p>
+                Example: <em>0.01873</em>
+            </p>
+        </li>
+        <li>Fractal_dimension_se<br>
+            <input type="text" name="_fractal_dimension_se" style="width: 350px;" placeholder="Enter an input of fractal_dimension_se (float)" value="0.003187"><br>
+            <p>
+                Example: <em>0.003187</em>
+            </p>
+         </li>
+        <li>Radius_worst<br>
+            <input type="text" name="_radius_worst" style="width: 350px;" placeholder="Enter an input of radius_worst (float)" value="14.97"><br>
+            <p>
+                Example: <em>14.97</em>
+            </p>
+        </li>
+        <li>Texture_worst<br>
+            <input type="text" name="_texture_worst" style="width: 350px;" placeholder="Enter an input of texture_worst (float)" value="25.41"><br>
+            <p>
+                Example: <em>25.41</em>
+            </p>
+        </li>
+        <li>Perimeter_worst<br>
+            <input type="text" name="_perimeter_worst" style="width: 350px;" placeholder="Enter an input of perimeter_worst (float)" value="97.66"><br>
+            <p>
+                Example: <em>97.66</em>
+            </p>
+        </li>
+        <li>Area_worst<br>
+            <input type="text" name="_area_worst" style="width: 350px;" placeholder="Enter an input value of area_worst (float)" value="686.5"><br>
+            <p>
+                Example: <em>686.5</em>
+            </p>
+        </li>
+        <li>Smoothness_worst<br>
+            <input type="text" name="_smoothness_worst" style="width: 350px;" placeholder="Enter an input value of smoothness_worst (float)" value="0.1313"><br>
+            <p>
+                Example: <em>0.1313</em>
+            </p>
+        </li>
+        <li>Compactness_worst<br>
+            <input type="text" name="_compactness_worst" style="width: 350px;" placeholder="Enter an input value of compactness_worst (float)" value="0.2119"><br>
+            <p>
+                Example: <em>0.2119</em>
+            </p>
+        </li>
+        <li>Concavity_worst<br>
+            <input type="text" name="_concavity_worst" style="width: 350px;" placeholder="Enter an input of concavity_worst(float)" value="0.2267"><br>
+            <p>
+                Example: <em>0.2267</em>
+            </p>
+        </li>
+        <li>Concavepoints_worst<br>
+            <input type="text" name="_concavepoints_worst" style="width: 350px;" placeholder="Enter an input of concavepoints_worst (float)" value="0.09993"><br>
+            <p>
+                Example: <em>0.09993</em>
+            </p>
+         </li>
+        <li>Symmetry_worst<br>
+            <input type="text" name="_symmetry_worst" style="width: 350px;" placeholder="Enter an input of symmetry_worst (float)" value="0.2822"><br>
+            <p>
+                Example: <em>0.2822</em>
+            </p>
+        </li>
+        <li>Fractal_dimension_worst<br>
+            <input type="text" name="_fractal_dimension_worst" style="width: 350px;" placeholder="Enter an input of fractal_dimension_worst (float)" value="0.08004"><br>
+            <p>
+                Example: <em>0.08004</em>
+            </p>
+        </form>
+
+        <button id="predict">Predict target</button>
+        <h2 id="result"></h2>
+
+        <span>Please select model type：</span><br>
+        <select id="select" onchange="play()">
+            <option value="static/Figure_6.png" style="display:none">--Please select--</option>
+            <option value="static/Figure_1.png">Logistic_regression</option>
+            <option value="static/Figure_2.png">Decision Tree</option>
+            <option value="static/Figure_3.png">Random forest</option>
+            <option value="static/Figure_4.png">Naive Bayes</option>
+            <option value="static/Figure_5.png">knn</option>
+        </select>
+        <br><br>
+        <img id="head" src="static/Figure_6.png" width="400px"></p>
+        <br>
+    </div>
+
+</body>
+</html>
+
+
+
