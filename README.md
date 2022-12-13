@@ -24,7 +24,7 @@
 2. bc_flow.py - generate a metaflow history with DAG
 3. breast-cancer.csv - store the origin data
 4. breastcancer.ipynb - original playground with data
-5. requirements1.txt - packages that are needed
+5. requirements.txt - packages that are needed
 
 ## Deployment
 1. Using AWS EC2 
