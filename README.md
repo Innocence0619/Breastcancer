@@ -33,8 +33,12 @@ Apart from using html, we created an EC2 instance for our prediction
 2. Comet playground
 
 We have updated metrics needed into Comet 
+
 Visit by :https://www.comet.com/nyu-fre-7773-2021/fre7773finalproject?shareable=JMrntmCQVqDBPHKJ5Nl49U2X0
 
 <img width="910" alt="Screenshot_20221212_095736" src="https://user-images.githubusercontent.com/53091204/207223101-a548db88-cbcc-4a63-b940-66bcc30172b8.png">
+
+## Author
+* [Yuxuan Zhou] (https://github.com/Innocence0619)
 
 
