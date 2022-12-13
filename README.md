@@ -1,7 +1,9 @@
 # FRE7773finalproject
-## final project by Tingwei, Yuxuan and Ziqi
-### Description
-###Getting Started
+## Description
+## Getting Started
+### Code and Data
+1. Project can be reached at 
+2. Raw data can be download at https://www.kaggle.com/datasets/yasserh/breast-cancer-dataset
 app.py - store the flask app
 bc_flow.py - store the metaflow version
 breast-cancer.csv - store the origin data
