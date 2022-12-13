@@ -35,4 +35,6 @@ Apart from using html, we created an EC2 instance for our prediction
 We have updated metrics needed into Comet 
 Visit by :https://www.comet.com/nyu-fre-7773-2021/fre7773finalproject?shareable=JMrntmCQVqDBPHKJ5Nl49U2X0
 
-![Uploading accuracy_scores_Decision Tree,accuracy_scores_KNN,accuracy_scores_Logistic Regression,accuracy_scores_Naive Bayes,accuracy_scores_Random Forest,cross_val_scores_Decision Tree,cross_val_scores_KNN,cross_val_scores_.jpeg…]()
+<img width="910" alt="Screenshot_20221212_095736" src="https://user-images.githubusercontent.com/53091204/207223101-a548db88-cbcc-4a63-b940-66bcc30172b8.png">
+
+
