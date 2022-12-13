@@ -5,7 +5,7 @@
 1. Project can be reached at https://github.com/Innocence0619/Breastcancer
 2. Raw data can be download at https://www.kaggle.com/datasets/yasserh/breast-cancer-dataset
 ### Executing Project
-1. Check all the packages are installed by code \n
+1. Check all the packages are installed by code \newline
 `pip install -r requirements.txt`
 2. Run bc_flow.py to create a metaflow data \n
 `python3 bc_flow.py run --with card`
