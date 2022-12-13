@@ -30,7 +30,7 @@
 1. Using AWS EC2 
 Apart from using html, we created an EC2 instance for our prediction
 
-http://ec2-54-172-18-95.compute-1.amazonaws.com:8080/
+Visit by: http://ec2-54-172-18-95.compute-1.amazonaws.com:8080/
 
 <img width="924" alt="Screenshot_20221212_090210" src="https://user-images.githubusercontent.com/53091204/207222080-f7239caf-ca84-46e2-aad6-1aab7c005edc.png">
 2. Comet playground
