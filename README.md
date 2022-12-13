@@ -27,4 +27,12 @@
 5. requirements1.txt - packages that are needed
 
 ## Deployment
+1. Using AWS EC2 
+Apart from using html, we created an EC2 instance for our prediction
 <img width="924" alt="Screenshot_20221212_090210" src="https://user-images.githubusercontent.com/53091204/207222080-f7239caf-ca84-46e2-aad6-1aab7c005edc.png">
+2. Comet playground![Uploading accuracy_scores_Decision Tree,accuracy_scores_KNN,accuracy_scores_Logistic Regression,accuracy_scores_Naive Bayes,accuracy_scores_Random Forest,cross_val_scores_Decision Tree,cross_val_scores_KNN,cross_val_scores_.jpeg…]()
+
+We have updated metrics needed into Comet 
+Visit by :https://www.comet.com/nyu-fre-7773-2021/fre7773finalproject?shareable=JMrntmCQVqDBPHKJ5Nl49U2X0
+
+![Uploading accuracy_scores_Decision Tree,accuracy_scores_KNN,accuracy_scores_Logistic Regression,accuracy_scores_Naive Bayes,accuracy_scores_Random Forest,cross_val_scores_Decision Tree,cross_val_scores_KNN,cross_val_scores_.jpeg…]()
