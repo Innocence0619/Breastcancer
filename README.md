@@ -19,9 +19,12 @@
 
 4. Check the `breast cancer.ipynb` file to see all the EDA and whole process.
 
-### Files instructions
+## Files instructions
 1. app.py - store the flask source code
 2. bc_flow.py - generate a metaflow history with DAG
 3. breast-cancer.csv - store the origin data
 4. breastcancer.ipynb - original playground with data
 5. requirements1.txt - packages that are needed
+
+## Deployment
+<img width="924" alt="Screenshot_20221212_090210" src="https://user-images.githubusercontent.com/53091204/207222080-f7239caf-ca84-46e2-aad6-1aab7c005edc.png">
