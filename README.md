@@ -40,7 +40,7 @@ Visit by :https://www.comet.com/nyu-fre-7773-2021/fre7773finalproject?shareable=
 
 ## Author
 * Yuxuan Zhou https://github.com/Innocence0619
-* Ziqi Yuan
+* Ziqi Yuan https://github.com/Cowry-Yuan
 * Tingwei Yang
 
 ## Acknowledgments
